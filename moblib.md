@@ -81,3 +81,21 @@ function update_elorating_moduleinfo($courseid,$itemtype,$itemmodule,$iteminstan
     return true;
 }
 ```
+**function update_moduleinfo($cm, $moduleinfo, $course, $mform = null) {
+**
+sau
+```
+$updateinstancefunction = $moduleinfo->modulename."_update_instance";
+    if (!$updateinstancefunction($moduleinfo, $mform)) {
+        print_error('cannotupdatemod', '', course_get_url($course, $cm->section), $moduleinfo->modulename);
+    }
+```
+```
+// Nhien update_elorating_moduleinfo    
+    if(isset($moduleinfo->elorating))
+    {
+        if(!update_elorating_moduleinfo($cm->course,'mod',$moduleinfo->modulename,$cm->instance,0,$moduleinfo->elorating)){// Nhien Update elorating
+          print_error('cannotupdatemod', '', course_get_url($course, $cm->section), $moduleinfo->modulename);
+        }// End Nhien Update elorating
+    }
+```
