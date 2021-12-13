@@ -82,7 +82,7 @@ function update_elorating_moduleinfo($courseid,$itemtype,$itemmodule,$iteminstan
 }
 ```
 **function update_moduleinfo($cm, $moduleinfo, $course, $mform = null) {
-**
+**  
 sau
 ```
 $updateinstancefunction = $moduleinfo->modulename."_update_instance";
