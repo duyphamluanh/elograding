@@ -1,21 +1,9 @@
 **Trong** ```static private function _fetch_course_tree_recursion($category_array, &$sortorder) {}```  
 **Thêm**  
 ```
-        if (isset($category_array['object']->elorating) && $category_array['object']->elorating==GRADE_TYPE_NONE ) { // Nhien Tao Thay May roi
-            return null;
-        }
+if (isset($category_array['object']->elorating) && $category_array['object']->elorating==GRADE_TYPE_NONE ) { // Nhien
+    return null;
+}
 ```  
 **RESULT**
-```
-    /**
-     * An internal function that recursively sorts grade categories within a course
-     *
-     * @param array $category_array The seed of the recursion
-     * @param int   $sortorder The current sortorder
-     * @return array An array containing 'object', 'type', 'depth' and optionally 'children'
-     */
-    
-        if (isset($category_array['object']->elorating) && $category_array['object']->elorating==GRADE_TYPE_NONE ) { // Nhien Tao Thay May roi
-            return null;
-        }
-```
+![image](https://user-images.githubusercontent.com/32034702/146160560-d0257a52-5b04-47b9-8140-372770c452ac.png)
