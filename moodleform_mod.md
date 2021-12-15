@@ -1,4 +1,6 @@
- **NEW**  
+**course/moodleform_mod.php**  
+
+**NEW**  
  Thêm đoạn code trước ```function standard_coursemodule_elements(){}```
 ```
     /**
