@@ -1,21 +1,3 @@
-**Thêm** ```'elorating');//NhienTest 'elorating'```
+**Thêm** ```'elorating');//NhienTest 'elorating'```  
 
-```class grade_item extends grade_object {
-    /**
-     * DB Table (used by grade_object).
-     * @var string $table
-     */
-    public $table = 'grade_items';
-
-    /**
-     * Array of required table fields, must start with 'id'.
-     * @var array $required_fields
-     */
-        public $required_fields = array('id', 'courseid', 'categoryid', 'itemname','itemtype', 'itemmodule', 'iteminstance',
-                                 'itemnumber', 'iteminfo', 'idnumber', 'calculation', 'gradetype', 'grademax', 'grademin',
-                                 'scaleid', 'outcomeid', 'gradepass', 'multfactor', 'plusfactor', 'aggregationcoef',
-                                 'aggregationcoef2', 'sortorder', 'display', 'decimals', 'hidden', 'locked', 'locktime',
-                                 'needsupdate', 'weightoverride', 'timecreated', 'timemodified','elorating');//NhienTest 'elorating'
-
-
-```
+![image](https://user-images.githubusercontent.com/32034702/146160711-41a88e6b-b90a-4969-8ec7-393147723be0.png)
