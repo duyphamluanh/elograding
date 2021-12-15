@@ -16,6 +16,10 @@
          }
      }        
 ```  
+**RESULT**  
+
+![image](https://user-images.githubusercontent.com/32034702/146161102-37fdbe45-196e-4222-9e77-26fef4de55dd.png)  
+
 **Trong** ```protected function get_allgradeitems() {```  
      ***Trước***
 ```return $item->gradetype != GRADE_TYPE_NONE; ```  
@@ -23,3 +27,6 @@
 ```
 if(isset($item->elorating) && $item->elorating == GRADE_TYPE_NONE) return false;// Nhien
 ```  
+**RESULT**  
+![image](https://user-images.githubusercontent.com/32034702/146160935-28c6f6cd-28f6-41b2-83c6-d7c43e2ea34f.png)  
+
