@@ -1,33 +1,6 @@
+**OLD**  
 ```
-//Nhien Add
-        $old_elorating = NULL;
-        if (!empty($this->_cm)) {
-            if (!$this->_features->rating)
-            {
-                $isupdate = true;
-                if($isupdate){      
-                    $old_elorating = $this->get_elorating($COURSE->id,'mod',$this->_cm->modname,$this->_cm->instance,0);
-                }  
-            }       
-        }                           
-        if($old_elorating==NULL){
-            $old_elorating = 1;
-        }
-        if($old_elorating!=-1){
-            $eloratings = array(get_string('elononegrading', 'question'),
-                                        get_string('eloofficialgrading', 'question'),
-                                        get_string('eloexprirationgrading', 'question')
-                                        );
-            $mform->addElement('header', 'modstandardgrade','Elo Grating');
-            $mform->addElement('select', 'elorating', get_string('elokind', 'question'),$eloratings);
-            $mform->addHelpButton('elorating', 'elokind', 'question');
-            $mform->setDefault('elorating', $old_elorating);
-        }
-        
-// nhien end
-```
-```
- /**
+    /**
      * Adds all the standard elements to a form to edit the settings for an activity module.
      */
     function get_elorating($courseid,$itemtype,$itemmodule,$iteminstance,$itemnumber = 0){
@@ -62,7 +35,7 @@
             $gradetype = 2;
         return $gradetype;
     }
-```
+```  
 
 
 ```
@@ -77,8 +50,8 @@ function standard_coursemodule_elements(){
                 if($isupdate){      
                 $old_elorating = $this->get_elorating($COURSE->id,'mod',$this->_cm->modname,$this->_cm->instance,0);
 //                $eloratings = array(get_string('elononegrading', 'question'),
-  //                                  get_string('eloofficialgrading', 'question')
-    //                                );
+//                                  get_string('eloofficialgrading', 'question')
+//                                );
                 $eloratings = array(get_string('elononegrading', 'question'),
                                     get_string('eloofficialgrading', 'question'),
                                     get_string('eloexprirationgrading', 'question')
@@ -92,7 +65,8 @@ function standard_coursemodule_elements(){
                     $old_elorating_order = 0;
                 }else{
                     $old_elorating_order = 2;
-                }*/
+                }
+*/
                 if($old_elorating!=-1){
                     $mform->addElement('header', 'modstandardgrade','Elo Grating');
                     $mform->addElement('select', 'elorating', get_string('elokind', 'question'),$eloratings);
@@ -102,4 +76,34 @@ function standard_coursemodule_elements(){
                 }
             }       
         }
+```  
+**NEW**  
+```
+        //Nhien add
+        $old_elorating = NULL;
+        if (!empty($this->_cm)) {
+            $isupdate = true;
+            if($isupdate){      
+                $old_elorating = $this->get_elorating($COURSE->id,'mod',$this->_cm->modname,$this->_cm->instance,0);
+            }  
+        }
+        if (!$this->_features->rating)
+        {
+            if($old_elorating==NULL){
+                $old_elorating = 1;
+            }
+            if($old_elorating!=-1){
+                $eloratings = array(get_string('elononegrading', 'question'),
+                                            get_string('eloofficialgrading', 'question'),
+                                            get_string('eloexprirationgrading', 'question')
+                                            );
+                $mform->addElement('header', 'modstandardgrade','Elo Grating');
+                $mform->addElement('select', 'elorating', get_string('elokind', 'question'),$eloratings);
+                $mform->addHelpButton('elorating', 'elokind', 'question');
+                $mform->setDefault('elorating', $old_elorating);
+            }
+        }                              
+       
+        
+        // nhien - end
 ```
