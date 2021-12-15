@@ -1,5 +1,5 @@
 **Thêm** ```'elorating');//NhienTest 'elorating'```
-```
+
 class grade_item extends grade_object {
     /**
      * DB Table (used by grade_object).
@@ -17,4 +17,4 @@ class grade_item extends grade_object {
                                  'aggregationcoef2', 'sortorder', 'display', 'decimals', 'hidden', 'locked', 'locktime',
                                  'needsupdate', 'weightoverride', 'timecreated', 'timemodified','elorating');//NhienTest 'elorating'
 
-```
+
