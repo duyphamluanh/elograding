@@ -1,5 +1,4 @@
-
-**moblib.php**
+**Thêm function update_elorating_moduleinfo()**
 
 ```
 /**
@@ -81,17 +80,28 @@ function update_elorating_moduleinfo($courseid,$itemtype,$itemmodule,$iteminstan
     return true;
 }
 ```
-**function update_moduleinfo($cm, $moduleinfo, $course, $mform = null) {
-**  
-sau
+**Trong function add_moduleinfo($moduleinfo, $course, $mform = null) {}**  
+thêm trước ```return $moduleinfo;```  
 ```
-$updateinstancefunction = $moduleinfo->modulename."_update_instance";
+    if(isset($moduleinfo->elorating))
+    {
+        if(!update_elorating_moduleinfo($newcm->course,'mod',$moduleinfo->modulename,$moduleinfo->instance,0,$moduleinfo->elorating)){// Nhien Update elorating
+          print_error('cannotcreatemod', '', course_get_url($course, $newcm->section), $moduleinfo->modulename);
+        }// End Nhien Update elorating
+    }
+```
+
+**Trong function update_moduleinfo($cm, $moduleinfo, $course, $mform = null) {}**  
+Sau
+```
+    $updateinstancefunction = $moduleinfo->modulename."_update_instance";
     if (!$updateinstancefunction($moduleinfo, $mform)) {
         print_error('cannotupdatemod', '', course_get_url($course, $cm->section), $moduleinfo->modulename);
     }
 ```
+Thêm
 ```
-// Nhien update_elorating_moduleinfo    
+    // Nhien update_elorating_moduleinfo    
     if(isset($moduleinfo->elorating))
     {
         if(!update_elorating_moduleinfo($cm->course,'mod',$moduleinfo->modulename,$cm->instance,0,$moduleinfo->elorating)){// Nhien Update elorating
