@@ -1,4 +1,5 @@
 **course/modlib.php**  
+
 **Thêm function update_elorating_moduleinfo()**
 
 ```
