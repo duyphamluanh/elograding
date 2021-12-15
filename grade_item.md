@@ -1,4 +1,4 @@
-Thêm ```'elorating');//NhienTest 'elorating'```
+**Thêm** ```'elorating');//NhienTest 'elorating'```
 ```
 class grade_item extends grade_object {
     /**
