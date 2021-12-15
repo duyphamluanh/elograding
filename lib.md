@@ -1,4 +1,4 @@
-Them code vào cuối  ```public function load_final_grades() {}```  
+**Thêm code vào cuối**  ```public function load_final_grades() {}```
 
 ```
      // Elorating calculate final grade
@@ -14,10 +14,10 @@ Them code vào cuối  ```public function load_final_grades() {}```
          }
      }        
 ```  
-Trong ```protected function get_allgradeitems() {```  
-Trước  
+**Trong** ```protected function get_allgradeitems() {```  
+     ***Trước***
 ```return $item->gradetype != GRADE_TYPE_NONE; ```  
-Thêm  
+     ***Thêm***
 ```
 if(isset($item->elorating) && $item->elorating == GRADE_TYPE_NONE) return false;// Nhien
 ```  
