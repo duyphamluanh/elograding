@@ -1,6 +1,5 @@
 **course/moodleform_mod.php**  
 
-**NEW**  
  Thêm đoạn code trước ```function standard_coursemodule_elements(){}```
 ```
     /**
@@ -39,8 +38,9 @@
         return $gradetype;
     }
 ```  
+![image](https://user-images.githubusercontent.com/32034702/146162467-911a0c63-a7c7-49f9-8cd2-71ead9df2b00.png)  
 
-Thêm đoạn code sau trong ```function standard_coursemodule_elements(){}```
+Thêm đoạn code trong ```function standard_coursemodule_elements(){}```
 ```
         //Nhien add
         $old_elorating = NULL;
@@ -69,33 +69,5 @@ Thêm đoạn code sau trong ```function standard_coursemodule_elements(){}```
         // nhien - end
 ```  
 **RESULT**  
-```
-    function standard_coursemodule_elements(){
-        global $COURSE, $CFG, $DB;
-        $mform =& $this->_form;
-        //Nhien add
-        $old_elorating = NULL;
-        if (!empty($this->_cm)) {
-            $isupdate = true;
-            if($isupdate){      
-                $old_elorating = $this->get_elorating($COURSE->id,'mod',$this->_cm->modname,$this->_cm->instance,0);
-            }  
-        }
-        if (!$this->_features->rating)
-        {
-            if($old_elorating==NULL){
-                $old_elorating = 1;
-            }
-            if($old_elorating!=-1){
-                $eloratings = array(get_string('elononegrading', 'question'),
-                                            get_string('eloofficialgrading', 'question'),
-                                            get_string('eloexprirationgrading', 'question')
-                                            );
-                $mform->addElement('header', 'modstandardgrade','Elo Grating');
-                $mform->addElement('select', 'elorating', get_string('elokind', 'question'),$eloratings);
-                $mform->addHelpButton('elorating', 'elokind', 'question');
-                $mform->setDefault('elorating', $old_elorating);
-            }
-        }                              
-        // nhien - end
-```
+![image](https://user-images.githubusercontent.com/32034702/146162283-c31d0b0a-a5cf-4fdd-ab39-94d842e909e3.png)
+
