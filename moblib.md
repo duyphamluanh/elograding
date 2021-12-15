@@ -87,11 +87,13 @@ thêm trước ```return $moduleinfo;```
 ```
     if(isset($moduleinfo->elorating))
     {
-        if(!update_elorating_moduleinfo($newcm->course,'mod',$moduleinfo->modulename,$moduleinfo->instance,0,$moduleinfo->elorating)){// Nhien Update elorating
+        if(!update_elorating_moduleinfo($newcm->course,'mod',$moduleinfo->modulename,$moduleinfo->instance,0,$moduleinfo->elorating)){// Nhien
           print_error('cannotcreatemod', '', course_get_url($course, $newcm->section), $moduleinfo->modulename);
-        }// End Nhien Update elorating
+        }// End Nhien
     }
-```
+```  
+![image](https://user-images.githubusercontent.com/32034702/146161491-fdfbf5cf-10d2-4cfe-ace4-8608d7a80093.png)  
+
 
 **Trong function update_moduleinfo($cm, $moduleinfo, $course, $mform = null) {}**  
 Sau
@@ -110,4 +112,6 @@ Thêm
           print_error('cannotupdatemod', '', course_get_url($course, $cm->section), $moduleinfo->modulename);
         }// End Nhien Update elorating
     }
-```
+```  
+![image](https://user-images.githubusercontent.com/32034702/146161628-3dd57d6d-5e50-427c-94f0-efd294e09a57.png)
+
