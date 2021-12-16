@@ -1,6 +1,6 @@
 **course/modlib.php**  
 
-**Thêm function update_elorating_moduleinfo()**
+**1.Thêm function update_elorating_moduleinfo()**
 
 ```
 /**
@@ -82,7 +82,7 @@ function update_elorating_moduleinfo($courseid,$itemtype,$itemmodule,$iteminstan
     return true;
 }
 ```
-**Trong function add_moduleinfo($moduleinfo, $course, $mform = null) {}**  
+**2.Trong function add_moduleinfo($moduleinfo, $course, $mform = null) {}**  
 thêm trước ```return $moduleinfo;```  
 ```
     if(isset($moduleinfo->elorating))
@@ -95,7 +95,7 @@ thêm trước ```return $moduleinfo;```
 ![image](https://user-images.githubusercontent.com/32034702/146161491-fdfbf5cf-10d2-4cfe-ace4-8608d7a80093.png)  
 
 
-**Trong function update_moduleinfo($cm, $moduleinfo, $course, $mform = null) {}**  
+**3.Trong function update_moduleinfo($cm, $moduleinfo, $course, $mform = null) {}**  
 Sau
 ```
     $updateinstancefunction = $moduleinfo->modulename."_update_instance";
