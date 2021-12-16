@@ -1,6 +1,6 @@
 **course/moodleform_mod.php**  
 
- Thêm đoạn code trước ```function standard_coursemodule_elements(){}```
+ 1.Thêm đoạn code trước ```function standard_coursemodule_elements(){}```
 ```
     /**
      * Adds all the standard elements to a form to edit the settings for an activity module.
@@ -40,7 +40,7 @@
 ```  
 ![image](https://user-images.githubusercontent.com/32034702/146162467-911a0c63-a7c7-49f9-8cd2-71ead9df2b00.png)  
 
-Thêm đoạn code trong ```function standard_coursemodule_elements(){}```
+2. Thêm đoạn code trong ```function standard_coursemodule_elements(){}```
 ```
         //Nhien add
         $old_elorating = NULL;
